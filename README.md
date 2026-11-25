@@ -1,17 +1,16 @@
 <div align="center">
 
-# 🛠️ secrets-to-env-action
+# secrets-to-env-action
 
 **GitHub Action that exports all repository secrets as environment variables.**
 
 A TypeScript action (Glovo fork of [oNaiPs/secrets-to-env-action](https://github.com/oNaiPs/secrets-to-env-action)) that you call from a workflow step. It is not a service: nothing is deployed, and consumers pin it by tag.
 
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.3-3178C6?logo=typescript&logoColor=white)](package.json)
-[![Node.js](https://img.shields.io/badge/Node.js-20_runtime-339933?logo=nodedotjs&logoColor=white)](action.yml)
-[![Jest](https://img.shields.io/badge/Jest-29-C21325?logo=jest&logoColor=white)](package.json)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)](package.json)
+[![Node.js](https://img.shields.io/badge/Node.js-339933?logo=nodedotjs&logoColor=white)](action.yml)
+[![Jest](https://img.shields.io/badge/Jest-C21325?logo=jest&logoColor=white)](package.json)
 <br/>
 [![Build](https://img.shields.io/badge/CI-build_%2B_e2e-2088FF?logo=githubactions&logoColor=white)](#cicd)
-[![test files](https://img.shields.io/badge/test_files-1-blue)](__tests__/main.test.ts)
 [![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
 
 </div>
@@ -228,8 +227,8 @@ Nothing is published automatically. A new version is a Git tag on the commit (`v
 
 ```text
 .
-├── action.yml          # ⭐ action metadata: inputs, node20 runtime, entry point
-├── src/main.ts         # ⭐ the whole action
+├── action.yml          # source of truth: action metadata: inputs, node20 runtime, entry point
+├── src/main.ts         # source of truth: the whole action
 ├── __tests__/          # Jest tests (main.test.ts)
 ├── dist/               # bundled output run by GitHub (generated, committed)
 ├── .github/workflows/  # build.yml, e2e.yml; dependabot.yml
